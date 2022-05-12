@@ -1,9 +1,9 @@
+import axios from "axios";
+import { Form } from "../../components";
 import { MDBContainer } from "mdb-react-ui-kit";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import axios from "axios";
-import { Form } from "../../components";
 const Details = () => {
   const URL = "http://localhost:5000/users";
   const [data, setData] = useState([]);

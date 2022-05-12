@@ -1,9 +1,9 @@
 import axios from "axios";
+import Create from "./Pages/Products/Create";
+import Details from "./Pages/Products/Details";
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Sidebar, Table } from "./components";
-import Create from "./Pages/Products/Create";
-import Details from "./Pages/Products/Details";
 
 const App = () => {
   const URL = "http://localhost:5000/users";

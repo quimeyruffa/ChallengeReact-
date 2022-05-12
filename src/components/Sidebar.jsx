@@ -1,7 +1,7 @@
-import React from "react";
 import { BsPlusLg } from "react-icons/bs";
 import { FaThList } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import React from "react";
 const Sidebar = (props) => {
   return (
     <div className="sidenav">

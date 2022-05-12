@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import {
   MDBTable,
   MDBTableHead,
@@ -12,6 +11,7 @@ import {
   MDBPaginationItem,
   MDBPaginationLink,
 } from "mdb-react-ui-kit";
+import { useEffect, useState } from "react";
 
 function Table() {
   const [data, setData] = useState([]);
