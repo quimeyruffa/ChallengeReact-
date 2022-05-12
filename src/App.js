@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Sidebar, Table } from "./components";
+import Create from "./Pages/Products/Create";
+import Details from "./Pages/Products/Details";
 
-function App() {
+const App = () => {
+  const URL = "http://localhost:5000/users";
+
+  const [data, setData] = useState([]);
+
+  useEffect(() =>{
+    getLastIndex()
+  },[])
+
+  const getLastIndex = async () => {
+     await axios
+          .get(`${URL}`)
+          .then((response) => {
+            setData(response.data.length);
+          })
+          .catch((err) => alert(err));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Sidebar index={data}/>
+    <Routes>
+      <Route path='/' element={<Table />} />
+      <Route path={`/create/:index`} element={<Create />} />
+      <Route path='/details/:id' element={<Details />} />
+    </Routes>
+    </>
   );
-}
+};
 
 export default App;

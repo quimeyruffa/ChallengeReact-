@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ibuprofeno",
+      "category": "comprimido",
+      "code": "qwe123"
+    },
+    {
+      "id": 2,
+      "name": "Paracetamol",
+      "category": "comprimido",
+      "code": "3asa4dw3"
+    },
+    {
+      "name": "Tafirol",
+      "category": "comprimido ",
+      "code": "kwuyt523",
+      "id": 3
+    }
+  ]
+}
